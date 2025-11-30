@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import './App.css';
 import {Button} from 'flowbite-react';
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
   return (
     <div className="mx-auto flex max-w-md items-center justify-center">
       <div>
-        <h1 className="mb-4 text-4xl">Vite + React</h1>
+        <h1 className="mb-4 text-center text-4xl">Vite + React</h1>
         <div className="flex justify-center">
           <Button color="green" onClick={() => setCount(count => count + 1)}>
             count is {count}
