@@ -1,10 +1,55 @@
-# React + TypeScript + Vite
+# React.js Typescript application starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Usage: create fast prototypes, solve test tasks or start a new project with minimal initial setup.
 
-It uses [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) which uses [Babel](https://babeljs.io/)
+## Tech stack
 
-## React Compiler
+* [React](https://react.dev/) (v19)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Vite](https://vitejs.dev/)
+* Tailwind CSS
+* **UI Library:** [Flowbite](https://flowbite.com/) - ready to use UI component. Can be easily removed if not required.
+* ESLint
+* Prettier
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Quick start
 
+Install dependencies:
+
+```sh
+npm install
+```
+
+Run dev mode:
+
+```sh
+npm run dev
+```
+
+Then open http://localhost:5173 page in your browser.
+
+## Create a production build
+
+```sh
+npm run build
+```
+
+See "dist" folder for results.
+
+To run the production build:
+
+```sh
+npm run preview
+```
+
+## Type checking
+
+```sh
+npm run ts
+```
+
+## Linting
+
+```sh
+npm run lint
+```
