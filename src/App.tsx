@@ -10,7 +10,10 @@ function App() {
         <h1 className="mb-4 text-center text-4xl">Vite + React</h1>
         <div className="flex justify-center">
           <Button
-            className="bg-green-600 text-white hover:bg-green-700"
+            className="
+              bg-green-600 text-white
+              hover:bg-green-700
+            "
             onClick={() => setCount(count => count + 1)}
           >
             count is {count}
