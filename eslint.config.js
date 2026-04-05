@@ -7,6 +7,8 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
+import reactCompiler from 'eslint-plugin-react-compiler'
+import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss'
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -20,7 +22,11 @@ export default defineConfig([
       reactX.configs['recommended-typescript'],
       reactDom.configs.recommended,
       eslintPluginPrettierRecommended,
+      eslintPluginBetterTailwindcss.configs.recommended,
     ],
+    plugins: {
+      'react-compiler': reactCompiler,
+    },
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
@@ -28,6 +34,18 @@ export default defineConfig([
       },
       ecmaVersion: 2020,
       globals: globals.browser,
+    },
+    rules: {
+      'react-compiler/react-compiler': 'warn',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+    },
+    settings: {
+      "better-tailwindcss": {
+        entryPoint: "src/index.css",
+      }
     },
   },
 ])
