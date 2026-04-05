@@ -25,9 +25,6 @@ export default defineConfig([
     plugins: {
       'react-compiler': reactCompiler,
     },
-    rules: {
-      'react-compiler/react-compiler': 'warn',
-    },
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
@@ -35,6 +32,13 @@ export default defineConfig([
       },
       ecmaVersion: 2020,
       globals: globals.browser,
+    },
+    rules: {
+      'react-compiler/react-compiler': 'warn',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
     },
   },
 ])

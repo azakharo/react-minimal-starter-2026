@@ -8,7 +8,7 @@ Usage: create fast prototypes, solve test tasks or start a new project with mini
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 - Tailwind CSS
-- **UI Library:** [Flowbite](https://flowbite.com/) - ready to use UI component. Can be easily removed if not required.
+- **UI Library:** [shadcn/ui](https://ui.shadcn.com/) with Radix UI - accessible UI components built with Radix primitives.
 - ESLint
 - Prettier
 

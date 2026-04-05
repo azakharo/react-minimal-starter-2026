@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {Button} from 'flowbite-react';
+import {Button} from '@/components/ui/button';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,7 +9,10 @@ function App() {
       <div>
         <h1 className="mb-4 text-center text-4xl">Vite + React</h1>
         <div className="flex justify-center">
-          <Button color="green" onClick={() => setCount(count => count + 1)}>
+          <Button
+            className="bg-green-600 text-white hover:bg-green-700"
+            onClick={() => setCount(count => count + 1)}
+          >
             count is {count}
           </Button>
         </div>
