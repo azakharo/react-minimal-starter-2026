@@ -7,6 +7,7 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
+import reactCompiler from 'eslint-plugin-react-compiler'
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -21,6 +22,12 @@ export default defineConfig([
       reactDom.configs.recommended,
       eslintPluginPrettierRecommended,
     ],
+    plugins: {
+      'react-compiler': reactCompiler,
+    },
+    rules: {
+      'react-compiler/react-compiler': 'warn',
+    },
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
