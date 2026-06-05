@@ -1,21 +1,31 @@
 # AGENTS.md
 
-## Описание проекта
-
 SPA на React.js.
 
-## Технологический стек
+## Стек
 
-- [React](https://react.dev/) (v19)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- Tailwind CSS
-- **UI Library:** [shadcn/ui](https://ui.shadcn.com/) with Radix UI — доступные UI компоненты на базе Radix примитивов
+React 19, TypeScript, Vite, Tailwind CSS, shadcn/ui (radix-nova style).
 
-## Основные npm команды
+## Команды
 
-- Установка зависимостей: `npm install`
-- Разработка: `npm run dev`
-- Production build: `npm run build`
-- Проверка кода на наличие ошибок Typescript: `npm run ts`
-- Линтинг и автоформатирование кода: `npm run lint`
+- `npm run dev` — dev server на http://localhost:5173
+- `npm run build` — production build в `dist/`
+- `npm run ts` — typecheck
+- `npm run lint` — ESLint + Prettier автофикс
+
+## Архитектура
+
+- Path alias: `@/*` → `src/*`
+- shadcn/ui компоненты: `src/components/ui/`
+- Вход: `src/main.tsx` → `src/App.tsx`
+
+## React Compiler
+
+Включён babel-plugin-react-compiler. Не нужно использовать `useMemo`/`useCallback` вручную — компилятор оптимизирует автоматически.
+
+## shadcn/ui
+
+Стиль: `radix-nova`. Добавление компонента:
+```sh
+npx shadcn add <component>
+```
