@@ -19,13 +19,10 @@ React 19, TypeScript, Vite, Tailwind CSS, shadcn/ui (radix-nova style).
 - shadcn/ui компоненты: `src/components/ui/`
 - Вход: `src/main.tsx` → `src/App.tsx`
 
-## React Compiler
-
-Включён babel-plugin-react-compiler. Не нужно использовать `useMemo`/`useCallback` вручную — компилятор оптимизирует автоматически.
-
 ## shadcn/ui
 
 Стиль: `radix-nova`. Добавление компонента:
+
 ```sh
 npx shadcn add <component>
 ```
